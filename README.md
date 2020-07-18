@@ -49,7 +49,7 @@ const store = new Vuex.Store ({
 });
 
 En el template:
-
+`
 <div>
   <button @click= "aumentar" >+</button>
   <button @click= "disminuir(2)" >-</button>
@@ -62,7 +62,7 @@ En el template:
   </ul>
   
  </div>
- `,
+ ,
  
  computed:{ 
   ...mapState (['numero', 'cursos'])
