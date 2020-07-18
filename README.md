@@ -14,6 +14,9 @@ Actions. Mediante los actions se puede obtener data de un backend  api y procesa
 
 Commit. El commit ejecuta la mutación 
 
+Computed: Sirve para llamar al State en la hoja deseada
+Methods: Sirve para llamar a las Mutaciones en la hoja deseada
+
 Ejemplo global:
 
 En el archivo .js
@@ -65,9 +68,10 @@ En el template:
   ...mapState (['numero', 'cursos'])
  },
  methods:{
- 
-
-    
+  ...mapMutations (['aumentar', 'disminuir']),
+  ...mapActions (['obtenerCursos'])
+ }
+   
 
 C) Por qué y para qué se necesitaria utilizar un administrador de estados?
 El administrador de estados es necesario para poder tener componentes globales que nos faciliten su uso llevando un control simple.
